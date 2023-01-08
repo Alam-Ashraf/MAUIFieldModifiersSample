@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUIFieldModifiersSample.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolbar="clr-namespace:MAUIFieldModifiersSample">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20">
+
+            <toolbar:CommonToolbarView
+                x:Name="CommonToolbar"
+                x:FieldModifier="Private"
+                HorizontalOptions="FillAndExpand" />
+
+            <Image
+                x:Name="ImgDotNet"
+                Margin="0,30,0,0"
+                x:FieldModifier="Protected"
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                Source="dotnet_bot.png" />
+
+            <Label
+                FontSize="32"
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="Hello, World!" />
+
+            <Label
+                FontSize="18"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                SemanticProperties.HeadingLevel="Level2"
+                Text="Welcome to .NET Multi-platform App UI" />
+
+            <Button
+                x:Name="CounterBtn"
+                BackgroundColor="{StaticResource Secondary}"
+                Clicked="NavigateToSecondPage"
+                HorizontalOptions="Center"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Text="Goto Second Page"
+                TextColor="Black" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="MAUIFieldModifiersSample.CommonToolbarView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Grid
+        Padding="5,0,5,0"
+        BackgroundColor="{StaticResource Secondary}"
+        ColumnDefinitions="*,*,*"
+        HeightRequest="55"
+        HorizontalOptions="FillAndExpand">
+        <Image
+            x:Name="ImgToolbarBack"
+            Grid.Column="0"
+            x:FieldModifier="Public"
+            HeightRequest="35"
+            HorizontalOptions="Start"
+            Source="back.png"
+            VerticalOptions="CenterAndExpand"
+            WidthRequest="35">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnBackClicked" />
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Label
+            x:Name="LblToolbarTitle"
+            Grid.Column="1"
+            x:FieldModifier="Public"
+            FontAttributes="Bold"
+            FontSize="Large"
+            HorizontalOptions="CenterAndExpand"
+            HorizontalTextAlignment="Center"
+            VerticalOptions="Center" />
+    </Grid>
+</ContentView>
